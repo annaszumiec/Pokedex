@@ -1,0 +1,150 @@
+/* colors::cue
+dark gray - #292928;
+light gray - #e9e9e9;
+red - #CC0000;
+*/
+
+:root {
+  --dark-gray: #292928;
+  --light-gray: #e9e9e9;
+  --red: #cc0000;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: var(--dark-gray);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+}
+.banner {
+  width: 100%;
+  box-shadow: 10px 5px 5px rgba(29, 28, 28, 0.246);
+}
+
+.navbar {
+  background: var(--light-gray);
+}
+
+#title {
+  font-family: "Pokemon Hollow", sans-serif;
+  color: var(--dark-gray);
+  font-size: 48px;
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+.pokemon-list {
+  margin-top: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  margin: 15px;
+}
+
+.button-class {
+  padding: 16px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #d4d4d4;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 10px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: none;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    -0deg,
+    rgb(235, 235, 238),
+    rgb(255, 255, 255) 45%,
+    rgb(2, 2, 2) 45%,
+    rgb(0, 0, 0) 55%,
+    rgb(204, 0, 0) 55%
+  );
+}
+
+/* Modal popup */
+#exampleModal {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  /* transparent modal background */
+  background: rgba(0, 0, 0, 0.5);
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+}
+
+.close {
+  display: none;
+}
+
+.modal-header {
+  position: relative;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "Pokemon Hollow", sans-serif;
+  color: var(--dark-gray);
+  font-weight: 700;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+.modal-footer {
+  background-image: url("../img/bottom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+.btn-secondary {
+  text-align: center;
+  background-color: var(--dark-gray);
+  border: none;
+  color: #ffffff;
+}
+
+/* spin pokemonball */
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked + .square {
+  transform: rotate(180deg);
+}
+
+.button-class:active {
+  animation: rotator linear 0.5s infinite;
+}
+
+.button-class:hover {
+  animation: rotator linear 0.3s infinite;
+}
+
+@keyframes rotator {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
