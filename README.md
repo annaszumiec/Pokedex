@@ -6,4 +6,4 @@
  The Application is written with JQuery and Bootstrapp.
 
 
- [PureriverFilms on Netlify](https://annaszumiec.github.io/Pokedex/)
+ [Click to see Pokedex](https://annaszumiec.github.io/Pokedex/)
